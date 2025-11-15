@@ -39,7 +39,7 @@
     </AppHero>
 
     <!-- Introduction -->
-    <section class="py-20 bg-[#060914]">
+    <section class="py-20 bg-[#0b0e12]">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div
           v-motion
@@ -88,7 +88,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-[#060914]">
+    <section class="py-20 bg-[#0b0e12]">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div
           v-motion

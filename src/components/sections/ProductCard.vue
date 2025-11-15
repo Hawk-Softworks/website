@@ -3,7 +3,7 @@
     v-motion
     :initial="{ opacity: 0, y: 30 }"
     :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-    class="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#3b82f6]/50 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/10 flex flex-col"
+    class="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#5a7a9b]/50 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/10 flex flex-col"
   >
     <!-- Image -->
     <div class="relative overflow-hidden bg-gradient-card aspect-[4/3]">

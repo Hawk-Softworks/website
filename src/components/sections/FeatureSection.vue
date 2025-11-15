@@ -11,7 +11,7 @@
       class="relative group"
       :class="{ 'md:order-2': !imageLeft }"
     >
-      <div class="relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#3b82f6]/30 transition-all duration-200">
+      <div class="relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#5a7a9b]/30 transition-all duration-200">
         <img
           :src="image"
           :alt="title"

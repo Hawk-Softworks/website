@@ -6,14 +6,17 @@
     :target="href && external ? '_blank' : undefined"
     :rel="href && external ? 'noopener noreferrer' : undefined"
     :class="buttonClasses"
-    class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#060914]"
+    class="group/button relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0b0e12] overflow-hidden"
   >
-    <slot></slot>
-    <font-awesome-icon
-      v-if="external && href"
-      icon="arrow-up-right-from-square"
-      class="w-4 h-4"
-    />
+    <span v-if="variant === 'primary'" class="absolute inset-0 bg-gradient-blue-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
+    <span class="relative z-10 inline-flex items-center gap-2">
+      <slot></slot>
+      <font-awesome-icon
+        v-if="external && href"
+        icon="arrow-up-right-from-square"
+        class="w-4 h-4"
+      />
+    </span>
   </component>
 </template>
 
@@ -46,11 +49,11 @@ const buttonClasses = computed(() => {
 
   switch (props.variant) {
     case 'primary':
-      return `${baseClasses} bg-gradient-blue text-white hover:shadow-xl focus:ring-[#3b82f6]`
+      return `${baseClasses} bg-gradient-blue text-white hover:shadow-xl focus:ring-[#5a7a9b]`
     case 'secondary':
       return `${baseClasses} bg-white/10 text-white hover:bg-white/20 focus:ring-white/50`
     case 'outline':
-      return `${baseClasses} border-2 border-[#3b82f6] text-[#3b82f6] hover:bg-[#3b82f6] hover:text-white focus:ring-[#3b82f6]`
+      return `${baseClasses} border-2 border-[#5a7a9b] text-[#5a7a9b] hover:bg-[#5a7a9b] hover:text-white focus:ring-[#5a7a9b]`
     default:
       return baseClasses
   }

@@ -20,9 +20,9 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
           class="group relative"
         >
-          <div class="relative bg-[#0a0e27] rounded-2xl p-8 border border-white/10 hover:border-[#5865f2]/50 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl">
+          <div class="relative bg-[#111418] rounded-2xl p-8 border border-white/10 hover:border-[#5865f2]/50 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl">
             <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 bg-gradient-discord rounded-xl flex items-center justify-center text-white shadow-lg">
+              <div class="w-16 h-16 bg-gradient-sky rounded-xl flex items-center justify-center text-white shadow-lg">
                 <font-awesome-icon :icon="['fab', 'discord']" class="text-3xl" />
               </div>
               <h3 class="text-2xl md:text-3xl font-bold text-white">Discord</h3>
@@ -48,7 +48,7 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
           class="group relative"
         >
-          <div class="relative bg-[#0a0e27] rounded-2xl p-8 border border-white/10 hover:border-[#3b82f6]/50 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl">
+          <div class="relative bg-[#111418] rounded-2xl p-8 border border-white/10 hover:border-[#5a7a9b]/50 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl">
             <div class="flex items-center gap-4 mb-6">
               <div class="w-16 h-16 bg-gradient-sky rounded-xl flex items-center justify-center text-white shadow-lg">
                 <font-awesome-icon icon="envelope" class="text-3xl" />

@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 w-full z-50 bg-[#0a0e27]/90 backdrop-blur-lg border-b border-white/10">
+  <nav class="fixed top-0 w-full z-50 bg-[#111418]/90 backdrop-blur-lg border-b border-white/10">
     <div class="max-w-6xl mx-auto px-8 lg:px-16">
       <div class="flex items-center justify-between h-16">
         <!-- Logo/Brand -->
@@ -12,7 +12,7 @@
             alt="Hawk Softworks Logo"
             class="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
           />
-          <span class="text-xl font-bold text-white group-hover:text-[#3b82f6] transition-colors duration-300">
+          <span class="text-xl font-bold text-white group-hover:text-[#5a7a9b] transition-colors duration-300">
             Hawk Softworks
           </span>
         </RouterLink>
@@ -50,7 +50,7 @@
     <Transition name="mobile-menu">
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden bg-[#0a0e27] border-t border-white/10"
+        class="md:hidden bg-[#111418] border-t border-white/10"
       >
         <div class="max-w-6xl mx-auto px-8 py-4 space-y-3">
           <RouterLink
