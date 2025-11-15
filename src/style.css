@@ -2,9 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Modern color palette for aviation theme */
-  --color-aviation-dark: #111418;
-  --color-aviation-darker: #0b0e12;
+  /* Static colors (used in both themes) */
   --color-aviation-blue: #5a7a9b;
   --color-aviation-cyan: #607d8b;
   --color-aviation-sky: #6b8aa2;
@@ -15,14 +13,26 @@
   /* Extended spacing */
   --spacing-18: 4.5rem;
   --spacing-22: 5.5rem;
+}
 
-  /* Custom shadows for depth */
+/* Dark theme colors (now default) */
+:root {
+  --color-bg-primary: #111418;
+  --color-bg-secondary: #0b0e12;
+  --color-bg-tertiary: #1a1f26;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+  --color-border: #2d3748;
+  --color-border-light: #374151;
+
+  /* Shadows for depth */
   --shadow-glow: 0 0 20px rgba(90, 122, 155, 0.3);
   --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.3);
 
-  /* Custom gradients */
-  --background-image-gradient-dark: linear-gradient(to bottom, #0b0e12, #111418);
-  --background-image-gradient-dark-reverse: linear-gradient(to bottom, #111418, #0b0e12);
+  /* Gradients */
+  --background-image-gradient-primary: linear-gradient(to bottom, #0b0e12, #111418);
+  --background-image-gradient-reverse: linear-gradient(to bottom, #111418, #0b0e12);
   --background-image-gradient-blue: linear-gradient(to right, #5a7a9b, #6b8aa2);
   --background-image-gradient-blue-hover: linear-gradient(to right, #4a8bc2, #5db4f0);
   --background-image-gradient-sky: linear-gradient(to bottom right, #5a7a9b, #6b8aa2);
@@ -40,8 +50,8 @@
 
   body {
     font-family: var(--font-family-sans);
-    background-color: var(--color-aviation-darker);
-    color: #f8fafc;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -57,4 +67,5 @@
   html {
     scroll-behavior: smooth;
   }
+
 }

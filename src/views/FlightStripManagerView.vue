@@ -9,7 +9,7 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-          class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight"
+          class="text-4xl md:text-6xl font-bold heading-primary mb-4 leading-tight"
         >
           FlightStrip Manager
         </h1>
@@ -17,7 +17,7 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :enter="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
-          class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed"
+          class="text-lg md:text-xl text-secondary-color mb-6 leading-relaxed"
         >
           Your web-based tool for air traffic controlling
         </p>
@@ -39,7 +39,7 @@
     </AppHero>
 
     <!-- Introduction -->
-    <section class="py-20 bg-[#0b0e12]">
+    <section class="py-20 section-bg-primary">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div
           v-motion
@@ -47,10 +47,10 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
           class="max-w-4xl mx-auto text-center"
         >
-          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+          <h3 class="text-2xl md:text-3xl font-bold heading-primary mb-6">
             FlightStrip Manager
           </h3>
-          <p class="text-gray-300 text-lg leading-relaxed">
+          <p class="text-secondary-color text-lg leading-relaxed">
             As an ATC on an online network like IVAO, VATSIM or POSCON, have you ever lost track during the
             coordination process? Usually, for example as a tower controller, you are not only responsible for arrivals and departures,
             but also for movements on the ground and the start approvals.
@@ -108,7 +108,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-[#0b0e12]">
+    <section class="py-20 section-bg-primary">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div
           v-motion
@@ -116,10 +116,10 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
           class="max-w-3xl mx-auto text-center"
         >
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 class="text-3xl md:text-4xl font-bold heading-primary mb-6">
             Ready to enhance your ATC experience?
           </h2>
-          <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+          <p class="text-secondary-color text-lg mb-8 leading-relaxed">
             Launch the FlightStrip Manager web app now and start controlling with a modern,
             browser-based solution. No downloads, no installation - just open and control!
           </p>

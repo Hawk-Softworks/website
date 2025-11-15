@@ -15,7 +15,7 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-            class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white"
           >
             {{ title }}
           </h1>
@@ -24,7 +24,7 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
-            class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
+            class="text-lg md:text-xl mb-8 leading-relaxed text-slate-300"
           >
             {{ subtitle }}
           </p>
@@ -58,3 +58,9 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+.bg-gradient-overlay {
+  background-image: var(--background-image-gradient-overlay);
+}
+</style>

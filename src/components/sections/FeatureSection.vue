@@ -11,7 +11,7 @@
       class="relative group"
       :class="{ 'md:order-2': !imageLeft }"
     >
-      <div class="relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#5a7a9b]/30 transition-all duration-200">
+      <div class="relative rounded-2xl overflow-hidden transition-all duration-200 border bg-white/5 border-white/10 hover:border-[rgba(90,122,155,0.3)]">
         <img
           :src="image"
           :alt="title"
@@ -23,10 +23,10 @@
 
     <!-- Content -->
     <div :class="{ 'md:order-1': !imageLeft }">
-      <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+      <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">
         {{ title }}
       </h3>
-      <p class="text-gray-300 leading-relaxed text-lg">
+      <p class="leading-relaxed text-lg text-slate-300">
         {{ description }}
       </p>
       <slot></slot>
@@ -58,3 +58,4 @@ defineProps({
   }
 })
 </script>
+

@@ -3,24 +3,24 @@
     <AppNavbar />
 
     <!-- Header -->
-    <section class="bg-gradient-dark-reverse py-16">
+    <section class="section-bg-gradient py-16">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div class="text-center">
           <h1
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-            class="text-4xl md:text-5xl font-bold text-white mb-4"
+            class="text-4xl md:text-5xl font-bold heading-primary mb-4"
           >
             Terms of Use
           </h1>
-          <p class="text-gray-400">Last updated June 19, 2020</p>
+          <p class="text-muted-color">Last updated June 19, 2020</p>
         </div>
       </div>
     </section>
 
     <!-- Content -->
-    <section class="py-20 bg-[#0b0e12]">
+    <section class="py-20 section-bg-primary">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div
           v-motion
@@ -28,8 +28,8 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
           class="max-w-4xl mx-auto"
         >
-          <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
-            <div class="max-w-none [&_h3]:text-white [&_h3]:font-bold [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:mt-8 [&_h3]:mb-4 [&_h3]:first:mt-0 [&_h4]:text-white [&_h4]:font-semibold [&_h4]:text-lg [&_h4]:md:text-xl [&_h4]:mt-6 [&_h4]:mb-3 [&_p]:text-gray-300 [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:text-gray-300 [&_ul]:leading-relaxed [&_ul]:mb-4 [&_ul]:ml-6 [&_ul]:list-disc [&_ol]:text-gray-300 [&_ol]:leading-relaxed [&_ol]:mb-4 [&_ol]:ml-6 [&_ol]:list-disc [&_li]:mb-2">
+          <div class="backdrop-blur-md rounded-2xl p-8 md:p-12 border bg-white/5 border-white/10">
+            <div class="terms-content max-w-none text-slate-300">
               <!-- AGREEMENT TO TERMS -->
               <h3>AGREEMENT TO TERMS</h3>
               <p>
@@ -174,3 +174,66 @@
 import AppNavbar from '../../components/layout/AppNavbar.vue'
 import AppFooter from '../../components/layout/AppFooter.vue'
 </script>
+
+<style scoped>
+.text-muted-color {
+  color: var(--color-text-muted);
+}
+
+.terms-content :deep(h3),
+.terms-content :deep(h4) {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.terms-content :deep(h3) {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.terms-content :deep(h3:first-child) {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .terms-content :deep(h3) {
+    font-size: 1.5rem;
+  }
+}
+
+.terms-content :deep(h4) {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .terms-content :deep(h4) {
+    font-size: 1.25rem;
+  }
+}
+
+.terms-content :deep(p),
+.terms-content :deep(ul),
+.terms-content :deep(ol),
+.terms-content :deep(li) {
+  line-height: 1.75;
+  /* Color inherited from parent .terms-content */
+}
+
+.terms-content :deep(p) {
+  margin-bottom: 1rem;
+}
+
+.terms-content :deep(ul),
+.terms-content :deep(ol) {
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.terms-content :deep(li) {
+  margin-bottom: 0.5rem;
+}
+</style>

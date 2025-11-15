@@ -6,9 +6,9 @@
     :target="href && external ? '_blank' : undefined"
     :rel="href && external ? 'noopener noreferrer' : undefined"
     :class="buttonClasses"
-    class="group/button relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0b0e12] overflow-hidden"
+    class="group/button relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-[#0b0e12] overflow-hidden"
   >
-    <span v-if="variant === 'primary'" class="absolute inset-0 bg-gradient-blue-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
+    <span v-if="variant === 'primary'" class="absolute inset-0 button-primary-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
     <span class="relative z-10 inline-flex items-center gap-2">
       <slot></slot>
       <font-awesome-icon
@@ -49,13 +49,42 @@ const buttonClasses = computed(() => {
 
   switch (props.variant) {
     case 'primary':
-      return `${baseClasses} bg-gradient-blue text-white hover:shadow-xl focus:ring-[#5a7a9b]`
+      return `${baseClasses} button-primary hover:shadow-xl`
     case 'secondary':
       return `${baseClasses} bg-white/10 text-white hover:bg-white/20 focus:ring-white/50`
     case 'outline':
-      return `${baseClasses} border-2 border-[#5a7a9b] text-[#5a7a9b] hover:bg-[#5a7a9b] hover:text-white focus:ring-[#5a7a9b]`
+      return `${baseClasses} button-outline`
     default:
       return baseClasses
   }
 })
 </script>
+
+<style scoped>
+.button-primary {
+  background-image: var(--background-image-gradient-blue);
+  color: #ffffff;
+}
+
+.button-primary:focus {
+  --tw-ring-color: rgba(90, 122, 155, 0.5);
+}
+
+.button-primary-hover {
+  background-image: var(--background-image-gradient-blue-hover);
+}
+
+.button-outline {
+  border: 2px solid var(--color-aviation-blue);
+  color: var(--color-aviation-blue);
+}
+
+.button-outline:hover {
+  background-color: var(--color-aviation-blue);
+  color: #ffffff;
+}
+
+.button-outline:focus {
+  --tw-ring-color: rgba(90, 122, 155, 0.5);
+}
+</style>
