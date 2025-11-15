@@ -19,6 +19,16 @@
   /* Custom shadows for depth */
   --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
   --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  /* Custom gradients */
+  --background-image-gradient-dark: linear-gradient(to bottom, #060914, #0a0e27);
+  --background-image-gradient-dark-reverse: linear-gradient(to bottom, #0a0e27, #060914);
+  --background-image-gradient-blue: linear-gradient(to right, #3b82f6, #0ea5e9);
+  --background-image-gradient-discord: linear-gradient(to bottom right, #5865f2, #7289da);
+  --background-image-gradient-sky: linear-gradient(to bottom right, #3b82f6, #0ea5e9);
+  --background-image-gradient-card: linear-gradient(to bottom right, rgb(30 58 138 / 0.2), rgb(10 14 39 / 0.4), rgb(49 46 129 / 0.2));
+  --background-image-gradient-overlay: linear-gradient(to bottom, rgb(10 14 39 / 0.8), rgb(10 14 39 / 0.7), #060914);
+  --background-image-gradient-fade: linear-gradient(to top, #0a0e27, transparent);
 }
 
 @layer base {

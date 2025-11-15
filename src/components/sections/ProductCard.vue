@@ -3,25 +3,25 @@
     v-motion
     :initial="{ opacity: 0, y: 30 }"
     :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-    class="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#3b82f6]/50 transition-all duration-200 hover:shadow-lg"
+    class="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#3b82f6]/50 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/10 flex flex-col"
   >
     <!-- Image -->
-    <div class="relative overflow-hidden aspect-video">
+    <div class="relative overflow-hidden bg-gradient-card aspect-[4/3]">
       <img
         :src="image"
         :alt="title"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-contain p-8 transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e27] to-transparent opacity-60"></div>
+      <div class="absolute inset-0 bg-gradient-fade opacity-40"></div>
     </div>
 
     <!-- Content -->
-    <div class="p-8">
+    <div class="p-8 flex-1 flex flex-col">
       <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
         {{ title }}
       </h3>
-      <p class="text-gray-300 mb-6 leading-relaxed">
+      <p class="text-gray-300 mb-6 leading-relaxed flex-1">
         {{ description }}
       </p>
 
@@ -34,9 +34,7 @@
           class="flex-1"
         >
           Read more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+          <font-awesome-icon icon="chevron-right" class="w-4 h-4" />
         </AppButton>
         <AppButton
           v-if="launchLink"
@@ -45,7 +43,7 @@
           variant="primary"
           class="flex-1"
         >
-          Launch App
+          Open WebApp
         </AppButton>
       </div>
     </div>

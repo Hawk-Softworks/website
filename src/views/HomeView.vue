@@ -28,6 +28,7 @@
             :description="fpmDescription"
             :image="fpmImage"
             read-more-link="/fp"
+            launch-link="https://fpm.hawk-softworks.de"
           />
         </div>
       </div>

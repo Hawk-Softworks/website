@@ -63,7 +63,7 @@
     </section>
 
     <!-- Features -->
-    <section class="py-20 bg-gradient-to-b from-[#060914] to-[#0a0e27]">
+    <section class="py-20 bg-gradient-dark">
       <div class="max-w-6xl mx-auto px-8 lg:px-16 space-y-20">
         <!-- Feature 1: Column Customization -->
         <FeatureSection

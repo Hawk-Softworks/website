@@ -1,10 +1,10 @@
 <template>
   <section
-    class="relative bg-cover bg-center py-16 md:py-24 overflow-hidden"
-    :style="{ backgroundImage: `url(${backgroundImage})` }"
+    class="relative bg-cover py-16 md:py-24 overflow-hidden"
+    :style="{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: 'center -50px' }"
   >
     <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0e27]/80 via-[#0a0e27]/70 to-[#060914]"></div>
+    <div class="absolute inset-0 bg-gradient-overlay"></div>
 
     <!-- Content -->
     <div class="relative max-w-6xl mx-auto px-8 lg:px-16">

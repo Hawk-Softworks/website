@@ -3,7 +3,7 @@
     <AppNavbar />
 
     <!-- Header -->
-    <section class="bg-gradient-to-b from-[#0a0e27] to-[#060914] py-16">
+    <section class="bg-gradient-dark-reverse py-16">
       <div class="max-w-6xl mx-auto px-8 lg:px-16">
         <div class="text-center">
           <h1
