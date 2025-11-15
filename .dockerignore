@@ -5,9 +5,18 @@
 
 # Node
 node_modules
-!node_modules/bootstrap-icons
 npm-debug.log
-package-lock.json
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+lerna-debug.log
+
+# Vite build artifacts
+dist
+dist-ssr
+*.local
+.vite
+.cache
 
 # Helm charts
 chart/
@@ -31,6 +40,11 @@ Thumbs.db
 README.md
 *.md
 
+# Testing
+coverage/
+.nyc_output
+
 # Misc
 .env
 .env.local
+.env.*.local

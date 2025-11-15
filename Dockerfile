@@ -1,4 +1,21 @@
-# Use nginx alpine as base image for minimal size
+# Stage 1: Build the Vue 3 + Vite application
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production=false
+
+# Copy source code
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Stage 2: Serve with nginx
 FROM nginx:alpine
 
 # Remove default nginx static content
@@ -7,18 +24,15 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy main website files
-COPY index.html /usr/share/nginx/html/
-COPY html/ /usr/share/nginx/html/html/
-COPY css/ /usr/share/nginx/html/css/
-COPY js/ /usr/share/nginx/html/js/
-COPY res/ /usr/share/nginx/html/res/
-
-# Copy bootstrap icons from node_modules (only the font files needed)
-COPY node_modules/bootstrap-icons/font/ /usr/share/nginx/html/node_modules/bootstrap-icons/font/
+# Copy built application from builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost/health || exit 1
 
 # Run nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]

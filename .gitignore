@@ -1,3 +1,50 @@
+# Dependencies
 node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Cache
+.cache
+.vite
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE - IntelliJ IDEA
 .idea
 *.iml
+*.iws
+
+# IDE - VSCode
+.vscode/*
+!.vscode/extensions.json
+
+# IDE - Other
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing (optional, for future use)
+coverage
+*.lcov
+.nyc_output

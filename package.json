@@ -1,9 +1,13 @@
 {
   "name": "hawksoftworks-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Hawk Softworks - Software for virtual pilots and air traffic controllers",
-  "main": "index.html",
-  "scripts": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "keywords": [
     "hawk-softworks",
     "aviation",
@@ -13,6 +17,15 @@
   "author": "Hawk Softworks",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-icons": "^1.9.1"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vueuse/core": "^11.3.0",
+    "@vueuse/motion": "^2.2.6",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "vite": "^6.0.5"
   }
 }

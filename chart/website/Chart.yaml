@@ -2,5 +2,5 @@ apiVersion: v2
 name: website-chart
 description: Hawk Softworks Website - Software for virtual pilots and air traffic controllers
 type: application
-version: 0.0.0-dev
-appVersion: "1.0.0"
+version: 2.0.0
+appVersion: "2.0.0"
