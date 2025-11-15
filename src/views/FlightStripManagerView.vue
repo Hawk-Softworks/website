@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex min-h-screen flex-col">
     <AppNavbar />
 
     <!-- Hero Section -->
@@ -9,7 +9,7 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-          class="text-4xl md:text-6xl font-bold heading-primary mb-4 leading-tight"
+          class="heading-primary mb-4 text-4xl leading-tight font-bold md:text-6xl"
         >
           FlightStrip Manager
         </h1>
@@ -17,7 +17,7 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :enter="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
-          class="text-lg md:text-xl text-secondary-color mb-6 leading-relaxed"
+          class="text-secondary-color mb-6 text-lg leading-relaxed md:text-xl"
         >
           Your web-based tool for air traffic controlling
         </p>
@@ -30,7 +30,7 @@
             href="https://fsm.hawk-softworks.de"
             external
             variant="primary"
-            class="text-lg px-8 py-4"
+            class="px-8 py-4 text-lg"
           >
             Open WebApp
           </AppButton>
@@ -39,32 +39,31 @@
     </AppHero>
 
     <!-- Introduction -->
-    <section class="py-20 section-bg-primary">
-      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+    <section class="section-bg-primary py-20">
+      <div class="mx-auto max-w-6xl px-8 lg:px-16">
         <div
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-          class="max-w-4xl mx-auto text-center"
+          class="mx-auto max-w-4xl text-center"
         >
-          <h3 class="text-2xl md:text-3xl font-bold heading-primary mb-6">
-            FlightStrip Manager
-          </h3>
+          <h3 class="heading-primary mb-6 text-2xl font-bold md:text-3xl">FlightStrip Manager</h3>
           <p class="text-secondary-color text-lg leading-relaxed">
-            As an ATC on an online network like IVAO, VATSIM or POSCON, have you ever lost track during the
-            coordination process? Usually, for example as a tower controller, you are not only responsible for arrivals and departures,
-            but also for movements on the ground and the start approvals.
-            Here it can quickly happen that you lose track of which pilot has already received his take-off, taxi or
-            take-off clearance. With the FlightStrip Manager you can set up your own individually designed virtual controller workplace
-            and keep track of everything - directly in your browser, no installation required!
+            As an ATC on an online network like IVAO, VATSIM or POSCON, have you ever lost track
+            during the coordination process? Usually, for example as a tower controller, you are not
+            only responsible for arrivals and departures, but also for movements on the ground and
+            the start approvals. Here it can quickly happen that you lose track of which pilot has
+            already received his take-off, taxi or take-off clearance. With the FlightStrip Manager
+            you can set up your own individually designed virtual controller workplace and keep
+            track of everything - directly in your browser, no installation required!
           </p>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section class="py-20 bg-gradient-dark">
-      <div class="max-w-6xl mx-auto px-8 lg:px-16 space-y-20">
+    <section class="bg-gradient-dark py-20">
+      <div class="mx-auto max-w-6xl space-y-20 px-8 lg:px-16">
         <!-- Feature 1: Column Customization -->
         <FeatureSection
           title="Easily add and remove columns"
@@ -108,18 +107,18 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 section-bg-primary">
-      <div class="max-w-6xl mx-auto px-8 lg:px-16">
+    <section class="section-bg-primary py-20">
+      <div class="mx-auto max-w-6xl px-8 lg:px-16">
         <div
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-          class="max-w-3xl mx-auto text-center"
+          class="mx-auto max-w-3xl text-center"
         >
-          <h2 class="text-3xl md:text-4xl font-bold heading-primary mb-6">
+          <h2 class="heading-primary mb-6 text-3xl font-bold md:text-4xl">
             Ready to enhance your ATC experience?
           </h2>
-          <p class="text-secondary-color text-lg mb-8 leading-relaxed">
+          <p class="text-secondary-color mb-8 text-lg leading-relaxed">
             Launch the FlightStrip Manager web app now and start controlling with a modern,
             browser-based solution. No downloads, no installation - just open and control!
           </p>
@@ -127,7 +126,7 @@
             href="https://fsm.hawk-softworks.de"
             external
             variant="primary"
-            class="text-lg px-8 py-4"
+            class="px-8 py-4 text-lg"
           >
             Open WebApp
           </AppButton>

@@ -1,10 +1,6 @@
 {
   "permissions": {
-    "allow": [
-      "WebSearch",
-      "WebFetch(domain:vueuse.org)",
-      "Bash(find:*)"
-    ],
+    "allow": ["WebSearch", "WebFetch(domain:vueuse.org)", "Bash(find:*)"],
     "deny": [],
     "ask": []
   }

@@ -1,24 +1,18 @@
 <template>
   <footer class="footer-bg mt-auto border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-8 lg:px-16 py-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+    <div class="mx-auto max-w-6xl px-8 py-8 lg:px-16">
+      <div class="mb-6 grid grid-cols-1 gap-8 md:grid-cols-3">
         <!-- Sites -->
         <div>
-          <h5 class="footer-heading font-bold text-lg mb-4 uppercase tracking-wide">Sites</h5>
+          <h5 class="footer-heading mb-4 text-lg font-bold tracking-wide uppercase">Sites</h5>
           <ul class="space-y-2">
             <li>
-              <RouterLink
-                to="/"
-                class="footer-link transition-colors duration-150 block"
-              >
+              <RouterLink to="/" class="footer-link block transition-colors duration-150">
                 Home
               </RouterLink>
             </li>
             <li>
-              <RouterLink
-                to="/fsm"
-                class="footer-link transition-colors duration-150 block"
-              >
+              <RouterLink to="/fsm" class="footer-link block transition-colors duration-150">
                 FlightStrip Manager
               </RouterLink>
             </li>
@@ -27,16 +21,13 @@
                 href="https://fsm.hawk-softworks.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 FlightStrip Manager WebApp
               </a>
             </li>
             <li>
-              <RouterLink
-                to="/fpm"
-                class="footer-link transition-colors duration-150 block"
-              >
+              <RouterLink to="/fpm" class="footer-link block transition-colors duration-150">
                 FlightPlanner
               </RouterLink>
             </li>
@@ -45,7 +36,7 @@
                 href="https://fpm.hawk-softworks.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 FlightPlanner WebApp
               </a>
@@ -55,12 +46,12 @@
 
         <!-- About -->
         <div>
-          <h5 class="footer-heading font-bold text-lg mb-4 uppercase tracking-wide">About</h5>
+          <h5 class="footer-heading mb-4 text-lg font-bold tracking-wide uppercase">About</h5>
           <ul class="space-y-2">
             <li>
               <RouterLink
                 to="/legal/disclaimer"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 Disclaimer
               </RouterLink>
@@ -68,7 +59,7 @@
             <li>
               <RouterLink
                 to="/legal/terms"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 Terms and Conditions
               </RouterLink>
@@ -78,12 +69,12 @@
 
         <!-- Contact -->
         <div>
-          <h5 class="footer-heading font-bold text-lg mb-4 uppercase tracking-wide">Contact</h5>
+          <h5 class="footer-heading mb-4 text-lg font-bold tracking-wide uppercase">Contact</h5>
           <ul class="space-y-2">
             <li>
               <a
                 href="mailto:support@hawk-softworks.de"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 E-Mail
               </a>
@@ -93,7 +84,7 @@
                 href="https://discord.gg/JGwqwpS"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-150 block"
+                class="footer-link block transition-colors duration-150"
               >
                 Discord
               </a>
@@ -104,9 +95,7 @@
 
       <!-- Copyright -->
       <div class="footer-border-top pt-6 text-center">
-        <p class="footer-text">
-          © {{ currentYear }} Copyright: Hawk Softworks
-        </p>
+        <p class="footer-text">© {{ currentYear }} Copyright: Hawk Softworks</p>
       </div>
     </div>
   </footer>

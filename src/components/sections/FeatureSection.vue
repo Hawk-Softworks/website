@@ -3,30 +3,24 @@
     v-motion
     :initial="{ opacity: 0, y: 30 }"
     :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-    class="grid md:grid-cols-2 gap-8 md:gap-12 items-center py-8"
+    class="grid items-center gap-8 py-8 md:grid-cols-2 md:gap-12"
     :class="{ 'md:flex-row-reverse': !imageLeft }"
   >
     <!-- Image -->
-    <div
-      class="relative group"
-      :class="{ 'md:order-2': !imageLeft }"
-    >
-      <div class="relative rounded-2xl overflow-hidden transition-all duration-200 border bg-white/5 border-white/10 hover:border-[rgba(90,122,155,0.3)]">
-        <img
-          :src="image"
-          :alt="title"
-          class="w-full h-auto rounded-xl"
-          loading="lazy"
-        />
+    <div class="group relative" :class="{ 'md:order-2': !imageLeft }">
+      <div
+        class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-200 hover:border-[rgba(90,122,155,0.3)]"
+      >
+        <img :src="image" :alt="title" class="h-auto w-full rounded-xl" loading="lazy" />
       </div>
     </div>
 
     <!-- Content -->
     <div :class="{ 'md:order-1': !imageLeft }">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+      <h3 class="mb-4 text-2xl font-bold text-white md:text-3xl">
         {{ title }}
       </h3>
-      <p class="leading-relaxed text-lg text-slate-300">
+      <p class="text-lg leading-relaxed text-slate-300">
         {{ description }}
       </p>
       <slot></slot>
@@ -38,24 +32,23 @@
 defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   image: {
     type: String,
-    required: true
+    required: true,
   },
   imageLeft: {
     type: Boolean,
-    default: true
+    default: true,
   },
   delay: {
     type: Number,
-    default: 0
-  }
+    default: 0,
+  },
 })
 </script>
-

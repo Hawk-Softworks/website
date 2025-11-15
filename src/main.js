@@ -14,12 +14,21 @@ import {
   faBars,
   faXmark,
   faSun,
-  faMoon
+  faMoon,
 } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 // Add icons to library
-library.add(faEnvelope, faArrowUpRightFromSquare, faChevronRight, faBars, faXmark, faDiscord, faSun, faMoon)
+library.add(
+  faEnvelope,
+  faArrowUpRightFromSquare,
+  faChevronRight,
+  faBars,
+  faXmark,
+  faDiscord,
+  faSun,
+  faMoon
+)
 
 // Disable browser's automatic scroll restoration
 if ('scrollRestoration' in window.history) {

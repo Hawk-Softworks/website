@@ -8,45 +8,45 @@ const router = createRouter({
       name: 'home',
       component: () => import('../views/HomeView.vue'),
       meta: {
-        title: 'Hawk Softworks - Software for virtual pilots and air traffic controllers'
-      }
+        title: 'Hawk Softworks - Software for virtual pilots and air traffic controllers',
+      },
     },
     {
       path: '/fsm',
       name: 'flight-strip-manager',
       component: () => import('../views/FlightStripManagerView.vue'),
       meta: {
-        title: 'FlightStrip Manager - Hawk Softworks'
-      }
+        title: 'FlightStrip Manager - Hawk Softworks',
+      },
     },
     {
       path: '/fp',
       name: 'flight-planner',
       component: () => import('../views/FlightPlannerView.vue'),
       meta: {
-        title: 'FlightPlanner - Hawk Softworks'
-      }
+        title: 'FlightPlanner - Hawk Softworks',
+      },
     },
     {
       path: '/legal/disclaimer',
       name: 'disclaimer',
       component: () => import('../views/legal/DisclaimerView.vue'),
       meta: {
-        title: 'Disclaimer - Hawk Softworks'
-      }
+        title: 'Disclaimer - Hawk Softworks',
+      },
     },
     {
       path: '/legal/terms',
       name: 'terms',
       component: () => import('../views/legal/TermsView.vue'),
       meta: {
-        title: 'Terms and Conditions - Hawk Softworks'
-      }
-    }
+        title: 'Terms and Conditions - Hawk Softworks',
+      },
+    },
   ],
   scrollBehavior() {
     return { top: 0, behavior: 'smooth' }
-  }
+  },
 })
 
 // Update page title on route change

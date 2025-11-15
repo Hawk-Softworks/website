@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Static colors (used in both themes) */
@@ -8,7 +8,8 @@
   --color-aviation-sky: #6b8aa2;
 
   /* Custom font family */
-  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Extended spacing */
   --spacing-18: 4.5rem;
@@ -36,8 +37,18 @@
   --background-image-gradient-blue: linear-gradient(135deg, #8b5cf6, #06b6d4);
   --background-image-gradient-blue-hover: linear-gradient(135deg, #a855f7, #22d3ee);
   --background-image-gradient-sky: linear-gradient(to bottom right, #5a7a9b, #6b8aa2);
-  --background-image-gradient-card: linear-gradient(to bottom right, rgb(70 90 115 / 0.2), rgb(17 20 24 / 0.4), rgb(75 85 105 / 0.2));
-  --background-image-gradient-overlay: linear-gradient(to bottom, rgb(17 20 24 / 0.5), rgb(17 20 24 / 0.6) 50%, #0b0e12);
+  --background-image-gradient-card: linear-gradient(
+    to bottom right,
+    rgb(70 90 115 / 0.2),
+    rgb(17 20 24 / 0.4),
+    rgb(75 85 105 / 0.2)
+  );
+  --background-image-gradient-overlay: linear-gradient(
+    to bottom,
+    rgb(17 20 24 / 0.5),
+    rgb(17 20 24 / 0.6) 50%,
+    #0b0e12
+  );
   --background-image-gradient-fade: linear-gradient(to top, #111418, transparent);
 }
 
@@ -67,5 +78,4 @@
   html {
     scroll-behavior: smooth;
   }
-
 }

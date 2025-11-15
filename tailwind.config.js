@@ -16,6 +16,6 @@ export default {
         'aviation-cyan': 'var(--color-aviation-cyan)',
         'aviation-sky': 'var(--color-aviation-sky)',
       },
-    }
-  }
+    },
+  },
 }

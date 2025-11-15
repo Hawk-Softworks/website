@@ -6,15 +6,18 @@
     :target="href && external ? '_blank' : undefined"
     :rel="href && external ? 'noopener noreferrer' : undefined"
     :class="buttonClasses"
-    class="group/button relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-[#0b0e12] overflow-hidden"
+    class="group/button relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-6 py-3 font-semibold ring-offset-[#0b0e12] transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none"
   >
-    <span v-if="variant === 'primary' || variant === 'outline'" class="absolute inset-0 button-primary-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
+    <span
+      v-if="variant === 'primary' || variant === 'outline'"
+      class="button-primary-hover absolute inset-0 rounded-lg opacity-0 transition-opacity duration-200 group-hover/button:opacity-100"
+    ></span>
     <span class="relative z-10 inline-flex items-center gap-2">
       <slot></slot>
       <font-awesome-icon
         v-if="external && href"
         icon="arrow-up-right-from-square"
-        class="w-4 h-4"
+        class="h-4 w-4"
       />
     </span>
   </component>
@@ -28,20 +31,20 @@ const props = defineProps({
   variant: {
     type: String,
     default: 'primary', // primary, secondary, outline
-    validator: (value) => ['primary', 'secondary', 'outline'].includes(value)
+    validator: (value) => ['primary', 'secondary', 'outline'].includes(value),
   },
   href: {
     type: String,
-    default: ''
+    default: '',
   },
   to: {
     type: String,
-    default: ''
+    default: '',
   },
   external: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 
 const buttonClasses = computed(() => {
@@ -87,7 +90,9 @@ const buttonClasses = computed(() => {
   border-radius: 0.5rem;
   padding: 2px;
   background: var(--background-image-gradient-blue);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;

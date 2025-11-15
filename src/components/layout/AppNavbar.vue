@@ -1,31 +1,30 @@
 <template>
-  <nav class="w-full bg-bg-secondary border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-8 lg:px-16">
-      <div class="flex items-center justify-between h-16">
+  <nav class="bg-bg-secondary w-full border-b border-white/10">
+    <div class="mx-auto max-w-6xl px-8 lg:px-16">
+      <div class="flex h-16 items-center justify-between">
         <!-- Logo/Brand -->
-        <RouterLink
-          to="/"
-          class="flex items-center gap-2 group transition-all duration-300"
-        >
+        <RouterLink to="/" class="group flex items-center gap-2 transition-all duration-300">
           <img
             :src="logoImage"
             alt="Hawk Softworks Logo"
             class="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
           />
-          <span class="text-xl font-bold text-text-primary group-hover:text-aviation-blue transition-colors duration-300">
+          <span
+            class="text-text-primary group-hover:text-aviation-blue text-xl font-bold transition-colors duration-300"
+          >
             Hawk Softworks
           </span>
         </RouterLink>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden items-center gap-8 md:flex">
           <!-- Nav Links -->
           <div class="flex items-center space-x-8">
             <RouterLink
               v-for="link in navLinks"
               :key="link.path"
               :to="link.path"
-              class="nav-link text-text-secondary transition-colors duration-150 font-medium"
+              class="nav-link text-text-secondary font-medium transition-colors duration-150"
             >
               {{ link.name }}
             </RouterLink>
@@ -33,15 +32,15 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center gap-3">
+        <div class="flex items-center gap-3 md:hidden">
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="text-text-primary p-2 rounded-lg hover:bg-border-custom-light transition-colors"
+            class="text-text-primary hover:bg-border-custom-light rounded-lg p-2 transition-colors"
             aria-label="Toggle menu"
           >
             <font-awesome-icon
               :icon="mobileMenuOpen ? 'xmark' : 'bars'"
-              class="w-6 h-6"
+              class="h-6 w-6"
               :class="{ 'rotate-90': mobileMenuOpen }"
               style="transition: transform 0.3s ease"
             />
@@ -54,15 +53,15 @@
     <Transition name="mobile-menu">
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden bg-bg-primary border-t border-border-custom-light"
+        class="bg-bg-primary border-border-custom-light border-t md:hidden"
       >
-        <div class="max-w-6xl mx-auto px-8 py-4 space-y-3">
+        <div class="mx-auto max-w-6xl space-y-3 px-8 py-4">
           <RouterLink
             v-for="link in navLinks"
             :key="link.path"
             :to="link.path"
             @click="mobileMenuOpen = false"
-            class="nav-link block py-3 px-4 text-text-secondary hover:bg-border-custom-light rounded-lg transition-all duration-150 font-medium"
+            class="nav-link text-text-secondary hover:bg-border-custom-light block rounded-lg px-4 py-3 font-medium transition-all duration-150"
           >
             {{ link.name }}
           </RouterLink>
@@ -82,7 +81,7 @@ const mobileMenuOpen = ref(false)
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'FlightStrip Manager', path: '/fsm' },
-  { name: 'FlightPlanner', path: '/fp' }
+  { name: 'FlightPlanner', path: '/fp' },
 ]
 </script>
 

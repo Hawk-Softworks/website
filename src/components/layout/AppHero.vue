@@ -1,13 +1,17 @@
 <template>
   <section
-    class="relative bg-cover py-10 md:py-16 overflow-hidden min-h-[280px] md:min-h-[350px]"
-    :style="{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: 'center -50px', backgroundRepeat: 'no-repeat' }"
+    class="relative min-h-[280px] overflow-hidden bg-cover py-10 md:min-h-[350px] md:py-16"
+    :style="{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundPosition: 'center -50px',
+      backgroundRepeat: 'no-repeat',
+    }"
   >
     <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-overlay"></div>
+    <div class="bg-gradient-overlay absolute inset-0"></div>
 
     <!-- Content -->
-    <div class="relative max-w-6xl mx-auto px-8 lg:px-16">
+    <div class="relative mx-auto max-w-6xl px-8 lg:px-16">
       <div class="mx-auto text-center">
         <slot name="content">
           <h1
@@ -15,7 +19,7 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-            class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white"
+            class="mb-6 text-4xl leading-tight font-bold text-white md:text-6xl"
           >
             {{ title }}
           </h1>
@@ -24,7 +28,7 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
-            class="text-lg md:text-xl mb-8 leading-relaxed text-slate-300"
+            class="mb-8 text-lg leading-relaxed text-slate-300 md:text-xl"
           >
             {{ subtitle }}
           </p>
@@ -46,16 +50,16 @@
 defineProps({
   backgroundImage: {
     type: String,
-    default: ''
+    default: '',
   },
   title: {
     type: String,
-    default: ''
+    default: '',
   },
   subtitle: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 </script>
 
