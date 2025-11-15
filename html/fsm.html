@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>FlightStrip Manager</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <!-- Bootstrap icons-->
+    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/custom-styles.css" rel="stylesheet"/>
+    <link href="../css/fsm.css" rel="stylesheet">
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+                <li class="nav-item" id="nav-item"><a class="nav-link active" href="#!">FlightStrip Manager</a></li>
+                <li class="last-nav-item"><a class="nav-link" href="fpm.html">FlightPlanner</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-dark bg-header-fsm py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">FlightStrip Manager</h1>
+                    <p class="lead text-white mb-4">Your web-based tool for air traffic controlling</p>
+                    <a class="btn btn-primary btn-lg" href="https://fsm.hawk-softworks.de" role="button">Launch App <i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Features section-->
+<section class="py-3 border-bottom" id="features">
+    <div class="d-flex justify-content-center p-5">
+        <div class="w-50">
+            <h3>
+                <b>FlightStrip Manager</b>
+            </h3>
+            <p>
+                As an ATC on an online network like IVAO, VATSIM or POSCON, have you ever lost track during the
+                coordination process?
+                Usually, for example as a tower controller, you are not only responsible for arrivals and departures,
+                but also for movements on the ground and the start approvals.
+                Here it can quickly happen that you lose track of which pilot has already received his take-off, taxi or
+                take-off clearance.
+                With the FlightStrip Manager you can set up your own individually designed virtual controller workplace
+                and keep track of everything - directly in your browser, no installation required!
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-1 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col mb-5 mb-lg-0 d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Easily add and remove columns</b></h3>
+                    <p>
+                        The FlightStrip Manager has a dynamic system to add and remove columns.
+                        This allows you to map any airport in the world, regardless of whether it is called Ground or
+                        Apron, or how many stations the airport has.
+                        Customize your workspace to match your controlling needs perfectly.
+                    </p>
+                </div>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fsm/fsm_column_customization.png" alt="Column Customization">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-1">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fsm/fsm_multiplayer.png" alt="Multiplayer Mode">
+            </div>
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Real-time collaboration with other controllers</b></h3>
+                    <p>
+                        Our multiplayer feature offers the possibility to connect and collaborate with other controllers in real-time.
+                        All changes are synchronized instantly between all connected users, allowing seamless teamwork
+                        during busy traffic situations. Perfect for larger airports with multiple active positions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-1 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Connect to online networks</b></h3>
+                    <p>
+                        Fetch live data directly from VATSIM, IVAO, and POSCON servers.
+                        Automatically import aircraft information, flight plans, and current positions
+                        to quickly populate your flight strips without manual data entry.
+                    </p>
+                </div>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fsm/fsm_networks.png" alt="Network Integration">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-1">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fsm/fsm_proximity.png" alt="Proximity Alerts">
+            </div>
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Automatic proximity-based strip creation</b></h3>
+                    <p>
+                        Flight strips are automatically added when an aircraft enters a specified radius
+                        around your configured airport. Works for all traffic types - arrivals, departures, and VFR.
+                        Define your proximity range and let the system populate your workspace automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-1 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Fully customizable keyboard shortcuts</b></h3>
+                    <p>
+                        Customize the keyboard shortcuts to your preferences for maximum efficiency.
+                        Control aids can be switched on and off as needed.
+                        Configure the application to match your workflow and controlling style perfectly.
+                    </p>
+                </div>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fsm/fsm_keybindings.png" alt="Keyboard Shortcuts">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bolder mb-4">Ready to enhance your ATC experience?</h2>
+                <p class="lead mb-4">
+                    Launch the FlightStrip Manager web app now and start controlling with a modern,
+                    browser-based solution. No downloads, no installation - just open and control!
+                </p>
+                <a class="btn btn-primary btn-lg" href="https://fsm.hawk-softworks.de" role="button">
+                    Launch App Now <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<footer class="bg-dark text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sites</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="../index.html"
+                               class="footer text-white text-opacity-50 text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://fsm.hawk-softworks.de" class="footer text-white text-decoration-none">FlightStrip
+                                Manager</a>
+                        </li>
+                        <li>
+                            <a href="https://fpm.hawk-softworks.de"
+                               class="footer text-white text-opacity-50 text-decoration-none">FlightPlanner WebApp</a>
+                        </li>
+                        <li>
+                            <a href="fpm.html" class="footer text-white text-opacity-50 text-decoration-none">FlightPlanner
+                                Info</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="legal/disclaimer.html"
+                               class="footer text-white text-opacity-50 text-decoration-none">Disclaimer</a>
+                        </li>
+                        <li>
+                            <a href="legal/tac.html" class="footer text-white text-opacity-50 text-decoration-none">Terms
+                                and Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="mailto:support@hawk-softworks.de"
+                               class="footer text-white text-opacity-50 text-decoration-none">E-Mail</a>
+                        </li>
+                        <li>
+                            <a href="https://discord.gg/JGwqwpS"
+                               class="footer text-white text-opacity-50 text-decoration-none">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center p-3 footer-color">
+        © 2025 Copyright: Hawk Softworks
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Bootstrap core JS-->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../js/scripts.js"></script>
+</body>
+</html>

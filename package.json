@@ -1,0 +1,18 @@
+{
+  "name": "hawksoftworks-website",
+  "version": "1.0.0",
+  "description": "Hawk Softworks - Software for virtual pilots and air traffic controllers",
+  "main": "index.html",
+  "scripts": {},
+  "keywords": [
+    "hawk-softworks",
+    "aviation",
+    "flight-strip-manager",
+    "flight-planner"
+  ],
+  "author": "Hawk Softworks",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
+}

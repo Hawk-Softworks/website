@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>FlightStrip Manager</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <!-- Bootstrap icons-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">-->
+    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/custom-styles.css" rel="stylesheet"/>
+    <link href="../css/fsm.css" rel="stylesheet">
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+                <li class="nav-item" id="nav-item"><a class="nav-link" href="fsm.html">FlightStrip Manager</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#!">FlightPlanner</a></li>
+                <!--                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" href="html/auth/register.html">Register</button>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-dark bg-header-fsm py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">FlightPlanner</h1>
+                    <p class="lead text-white mb-4">Your tool for an organized flight</p>
+                    <a class="btn btn-primary" href="https://fpm.hawk-softworks.de" role="button">Open WebApp</a>
+                    <!--                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">-->
+                    <!--                        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">-->
+                    <!--                            Start now <span class="btn-label"><i class="bi bi-arrow-right"></i></span></button>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Features section-->
+<section class="py-3 border-bottom" id="features">
+    <div class="d-flex justify-content-center p-5">
+        <div class="w-50">
+            <h3>
+               <b>FlightPlanner</b>
+            </h3>
+            <p>
+                With the FlightPlanner, simple flight plans can be created quickly. This ensures a good overview during
+                a flight on e.g. IVAO or VATSIM.
+                All important information needed during the route is clearly displayed on one page.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="bg-light py-1">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col mb-5 mb-lg-0 d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>SimBrief and live METAR</b></h3>
+                    <p>
+                        The last flight plan created on SimBrief can be integrated with one click.
+                        Using the Fetch METAR buttons, the METAR can be retrieved in real-time.
+                    </p>
+                </div>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid" src="../res/fp_screen.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fp/fp_example_1.jpg">
+            </div>
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Frequency-Database and SID/STAR Finder</b></h3>
+                    <p>
+                        All available frequencies can be obtained for every airport in the world.
+                        Also the current SID and STAR can be calculated based on the airport, the runway and a waypoint.
+                        Always with the latest AIRAC Cycle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-1">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 ">
+            <div class="col container d-flex">
+                <div class="row justify-content-center align-self-center">
+                    <h3><b>Printable Flightplan</b></h3>
+                    <p>
+                        The final flight plan can be generated as PDF.
+                        You can choose between Light, Normal and Dark Theme.
+                        The flight plan is structured according to the different phases of a flight and contains all
+                        information, summarized on one page.
+                    </p>
+                </div>
+            </div>
+            <div class="col mb-5 mb-lg-0">
+                <img class="img-fluid img-thumbnail" src="../res/fp/fp_example_2.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer-->
+<footer class="bg-dark text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sites</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="../index.html"
+                               class="footer text-white text-decoration-none text-opacity-50">Home</a>
+                        </li>
+                        <li>
+                            <a href="fsm.html" class="footer text-white text-decoration-none text-opacity-50">FlightStrip
+                                Manager</a>
+                        </li>
+                        <li>
+                            <a href="https://fpm.hawk-softworks.de"
+                               class="footer text-white text-opacity-50 text-decoration-none">FlightPlanner WebApp</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer text-white text-decoration-none">FlightPlanner
+                                Info</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="legal/disclaimer.html"
+                               class="footer text-white text-opacity-50 text-decoration-none">Disclaimer</a>
+                        </li>
+                        <li>
+                            <a href="legal/tac.html" class="footer text-white text-opacity-50 text-decoration-none">Terms
+                                and
+                                Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="mailto:support@hawk-softworks.de"
+                               class="footer text-white text-opacity-50 text-decoration-none">E-Mail</a>
+                        </li>
+                        <li>
+                            <a href="https://discord.gg/JGwqwpS"
+                               class="footer text-white text-opacity-50 text-decoration-none">Discord</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 footer-color">
+        © 2025 Copyright: Hawk Softworks
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Bootstrap core JS-->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../js/scripts.js"></script>
+</body>
+</html>
