@@ -20,7 +20,7 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
           class="group relative"
         >
-          <div class="relative rounded-2xl p-8 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl bg-bg-primary border border-white/10 hover:border-[rgba(88,101,242,0.5)]">
+          <div class="relative rounded-2xl p-8 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-[0_10px_25px_-5px_rgba(6,182,212,0.2)] bg-bg-primary border border-white/10 hover:border-[#06b6d4]">
             <div class="flex items-center gap-4 mb-6">
               <div class="w-16 h-16 contact-icon-bg rounded-xl flex items-center justify-center contact-icon shadow-lg">
                 <font-awesome-icon :icon="['fab', 'discord']" class="text-3xl" />
@@ -33,7 +33,7 @@
             <AppButton
               href="https://discord.gg/JGwqwpS"
               external
-              variant="primary"
+              variant="outline"
               class="w-full justify-center"
             >
               Join now
@@ -48,7 +48,7 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 300, delay: 50 } }"
           class="group relative"
         >
-          <div class="relative rounded-2xl p-8 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-xl bg-bg-primary border border-white/10 hover:border-[rgba(90,122,155,0.5)]">
+          <div class="relative rounded-2xl p-8 transition-all duration-200 h-full flex flex-col shadow-lg hover:shadow-[0_10px_25px_-5px_rgba(6,182,212,0.2)] bg-bg-primary border border-white/10 hover:border-[#06b6d4]">
             <div class="flex items-center gap-4 mb-6">
               <div class="w-16 h-16 contact-icon-bg rounded-xl flex items-center justify-center contact-icon shadow-lg">
                 <font-awesome-icon icon="envelope" class="text-3xl" />
@@ -60,7 +60,7 @@
             </p>
             <AppButton
               href="mailto:support@hawk-softworks.de"
-              variant="primary"
+              variant="outline"
               class="w-full justify-center"
             >
               Write us
@@ -82,7 +82,7 @@ import AppButton from '../ui/AppButton.vue'
 }
 
 .contact-icon-bg {
-  background-image: var(--background-image-gradient-sky);
+  background-image: var(--background-image-gradient-blue);
 }
 
 .contact-icon {

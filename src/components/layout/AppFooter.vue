@@ -1,7 +1,7 @@
 <template>
   <footer class="footer-bg mt-auto border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-8 lg:px-16 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <div class="max-w-6xl mx-auto px-8 lg:px-16 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
         <!-- Sites -->
         <div>
           <h5 class="footer-heading font-bold text-lg mb-4 uppercase tracking-wide">Sites</h5>
@@ -9,7 +9,7 @@
             <li>
               <RouterLink
                 to="/"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 Home
               </RouterLink>
@@ -17,7 +17,7 @@
             <li>
               <RouterLink
                 to="/fsm"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 FlightStrip Manager
               </RouterLink>
@@ -27,7 +27,7 @@
                 href="https://fsm.hawk-softworks.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 FlightStrip Manager WebApp
               </a>
@@ -35,7 +35,7 @@
             <li>
               <RouterLink
                 to="/fpm"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 FlightPlanner
               </RouterLink>
@@ -45,7 +45,7 @@
                 href="https://fpm.hawk-softworks.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 FlightPlanner WebApp
               </a>
@@ -60,7 +60,7 @@
             <li>
               <RouterLink
                 to="/legal/disclaimer"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 Disclaimer
               </RouterLink>
@@ -68,7 +68,7 @@
             <li>
               <RouterLink
                 to="/legal/terms"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 Terms and Conditions
               </RouterLink>
@@ -83,7 +83,7 @@
             <li>
               <a
                 href="mailto:support@hawk-softworks.de"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 E-Mail
               </a>
@@ -93,7 +93,7 @@
                 href="https://discord.gg/JGwqwpS"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-link transition-colors duration-300 block"
+                class="footer-link transition-colors duration-150 block"
               >
                 Discord
               </a>
@@ -103,7 +103,7 @@
       </div>
 
       <!-- Copyright -->
-      <div class="footer-border-top pt-8 text-center">
+      <div class="footer-border-top pt-6 text-center">
         <p class="footer-text">
           © {{ currentYear }} Copyright: Hawk Softworks
         </p>
@@ -133,7 +133,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-link:hover {
-  color: var(--color-text-primary);
+  color: #06b6d4;
 }
 
 .footer-text {

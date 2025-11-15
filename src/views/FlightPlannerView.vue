@@ -109,7 +109,7 @@
             variant="primary"
             class="text-lg px-8 py-4"
           >
-            Open WebApp Now
+            Open WebApp
           </AppButton>
         </div>
       </div>

@@ -25,7 +25,7 @@
               v-for="link in navLinks"
               :key="link.path"
               :to="link.path"
-              class="text-text-secondary hover:text-text-primary transition-colors duration-300 font-medium"
+              class="nav-link text-text-secondary transition-colors duration-150 font-medium"
             >
               {{ link.name }}
             </RouterLink>
@@ -62,7 +62,7 @@
             :key="link.path"
             :to="link.path"
             @click="mobileMenuOpen = false"
-            class="block py-3 px-4 text-text-secondary hover:text-text-primary hover:bg-border-custom-light rounded-lg transition-all duration-300 font-medium"
+            class="nav-link block py-3 px-4 text-text-secondary hover:bg-border-custom-light rounded-lg transition-all duration-150 font-medium"
           >
             {{ link.name }}
           </RouterLink>
@@ -87,6 +87,11 @@ const navLinks = [
 </script>
 
 <style scoped>
+/* Cyan color on hover */
+.nav-link:hover {
+  color: #06b6d4;
+}
+
 /* Mobile menu transitions */
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {

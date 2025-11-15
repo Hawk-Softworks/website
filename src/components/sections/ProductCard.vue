@@ -3,14 +3,14 @@
     v-motion
     :initial="{ opacity: 0, y: 30 }"
     :visible-once="{ opacity: 1, y: 0, transition: { duration: 300 } }"
-    class="group relative rounded-2xl overflow-hidden transition-all duration-200 flex flex-col border bg-white/5 border-white/10 hover:border-[rgba(90,122,155,0.5)] hover:shadow-[0_10px_25px_-5px_rgba(90,122,155,0.2)]"
+    class="group relative rounded-2xl overflow-hidden transition-all duration-200 flex flex-col border bg-white/5 border-white/10 hover:border-[#06b6d4] hover:shadow-[0_10px_25px_-5px_rgba(6,182,212,0.2)]"
   >
     <!-- Image -->
-    <div class="relative overflow-hidden aspect-[4/3] bg-slate-800/50">
+    <div class="relative overflow-hidden aspect-[4/3] bg-gradient-to-br from-[#5a7a9b]/20 via-slate-800/50 to-[#2a4a6b]/30">
       <img
         :src="image"
         :alt="title"
-        class="w-full h-full object-contain p-8 transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-full object-contain p-8"
         loading="lazy"
       />
     </div>

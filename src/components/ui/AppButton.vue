@@ -8,7 +8,7 @@
     :class="buttonClasses"
     class="group/button relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-[#0b0e12] overflow-hidden"
   >
-    <span v-if="variant === 'primary'" class="absolute inset-0 button-primary-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
+    <span v-if="variant === 'primary' || variant === 'outline'" class="absolute inset-0 button-primary-hover opacity-0 group-hover/button:opacity-100 transition-opacity duration-200 rounded-lg"></span>
     <span class="relative z-10 inline-flex items-center gap-2">
       <slot></slot>
       <font-awesome-icon
@@ -75,16 +75,29 @@ const buttonClasses = computed(() => {
 }
 
 .button-outline {
-  border: 2px solid var(--color-aviation-blue);
-  color: var(--color-aviation-blue);
+  position: relative;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.button-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: var(--background-image-gradient-blue);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .button-outline:hover {
-  background-color: var(--color-aviation-blue);
   color: #ffffff;
 }
 
 .button-outline:focus {
-  --tw-ring-color: rgba(90, 122, 155, 0.5);
+  --tw-ring-color: rgba(139, 92, 246, 0.5);
 }
 </style>

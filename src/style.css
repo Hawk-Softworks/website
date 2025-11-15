@@ -33,8 +33,8 @@
   /* Gradients */
   --background-image-gradient-primary: linear-gradient(to bottom, #0b0e12, #111418);
   --background-image-gradient-reverse: linear-gradient(to bottom, #111418, #0b0e12);
-  --background-image-gradient-blue: linear-gradient(to right, #5a7a9b, #6b8aa2);
-  --background-image-gradient-blue-hover: linear-gradient(to right, #4a8bc2, #5db4f0);
+  --background-image-gradient-blue: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  --background-image-gradient-blue-hover: linear-gradient(135deg, #a855f7, #22d3ee);
   --background-image-gradient-sky: linear-gradient(to bottom right, #5a7a9b, #6b8aa2);
   --background-image-gradient-card: linear-gradient(to bottom right, rgb(70 90 115 / 0.2), rgb(17 20 24 / 0.4), rgb(75 85 105 / 0.2));
   --background-image-gradient-overlay: linear-gradient(to bottom, rgb(17 20 24 / 0.5), rgb(17 20 24 / 0.6) 50%, #0b0e12);
