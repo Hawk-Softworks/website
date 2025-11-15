@@ -122,9 +122,9 @@ jobs:
           echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ${{ env.REGISTRY }} --username ${{ github.actor }} --password-stdin
 
           CHART_FILE=$(ls ${{ env.CHART_NAME }}-*.tgz)
-          helm push $CHART_FILE oci://${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-chart
+          helm push $CHART_FILE oci://${{ env.REGISTRY }}/hawk-softworks
 
-          echo "Pushed Helm chart to oci://${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-chart"
+          echo "Pushed Helm chart to oci://${{ env.REGISTRY }}/hawk-softworks/${{ env.CHART_NAME }}"
 
       - name: Create Git tag
         if: steps.check_tag.outputs.skip == 'false'
@@ -156,10 +156,10 @@ jobs:
             ### Helm Chart Installation
             ```bash
             # Pull chart from OCI registry
-            helm pull oci://${{ env.REGISTRY }}/hawk-softworks/${{ env.CHART_NAME }} --version ${{ steps.version.outputs.version_without_v }}
+            helm pull oci://ghcr.io/hawk-softworks/website-chart --version ${{ steps.version.outputs.version_without_v }}
 
             # Or install directly
-            helm install website oci://${{ env.REGISTRY }}/hawk-softworks/${{ env.CHART_NAME }} --version ${{ steps.version.outputs.version_without_v }}
+            helm install website oci://ghcr.io/hawk-softworks/website-chart --version ${{ steps.version.outputs.version_without_v }}
             ```
 
             ### What's Changed
